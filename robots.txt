@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /js/
+Disallow: /css/
+Disallow: /php/
+Disallow: /data/
+Allow: /media/
+Allow: /index.html
+Allow: /terminos.html
+Allow: /privacidad.html
+Allow: /cookies.html 

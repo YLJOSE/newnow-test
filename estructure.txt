@@ -1,0 +1,18 @@
+📁 proyecto/
+├── �� assets/
+│   ├── 📁 css/
+│   │   └── styles.css
+│   ├── 📁 js/
+│   │   └── main.js
+│   ├── �� img/
+│   │   └── (imágenes)
+│   └── 📁 fonts/
+│       └── (fuentes)
+├── 📁 pages/
+│   ├── cookies.html
+│   ├── privacidad.html
+│   └── terminos.html
+├── index.html
+├── estructure.txt
+├── robots.txt
+└── .htaccess
