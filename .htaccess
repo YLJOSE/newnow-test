@@ -1,51 +1,105 @@
+# Archivo de configuración de Apache para New Now
+# Este archivo contiene reglas de seguridad y optimización para el servidor web
+
 # Prevenir listado de directorios
+# Evita que los usuarios puedan ver el contenido de los directorios
+# Esto mejora la seguridad al ocultar la estructura de archivos
 Options -Indexes
 
 # Proteger archivos sensibles
+# Bloquea el acceso directo a archivos de configuración y control de versiones
+# Incluye archivos como .htaccess, .git, .env y archivos de configuración de dependencias
 <FilesMatch "^(\.htaccess|\.htpasswd|\.git|\.env|composer\.json|package\.json)$">
     Order Allow,Deny
     Deny from all
 </FilesMatch>
 
 # Forzar HTTPS
+# Redirige todo el tráfico HTTP a HTTPS para mayor seguridad
+# Asegura que todas las conexiones sean cifradas
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Prevenir hotlinking de imágenes
+# Evita que otros sitios usen nuestras imágenes sin permiso
+# Solo permite el acceso desde nuestro dominio
 RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} !^https?://(www\.)?telecom\.com [NC]
 RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
 
 # Headers de seguridad
+# Configuración de cabeceras HTTP para mejorar la seguridad del sitio
 <IfModule mod_headers.c>
+    # Previene el MIME-sniffing
+    # Evita que el navegador adivine el tipo de contenido
     Header set X-Content-Type-Options "nosniff"
+    
+    # Previene clickjacking
+    # Impide que el sitio sea embebido en iframes de otros dominios
     Header set X-Frame-Options "DENY"
+    
+    # Habilita protección XSS en navegadores modernos
+    # Activa el filtro XSS del navegador
     Header set X-XSS-Protection "1; mode=block"
+    
+    # Fuerza HTTPS
+    # Obliga al navegador a usar HTTPS durante un año
     Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    
+    # Política de seguridad de contenido
+    # Define qué recursos pueden ser cargados y desde dónde
     Header set Content-Security-Policy "default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:;"
 </IfModule>
 
 # Comprimir archivos
+# Habilita la compresión GZIP para mejorar el rendimiento
+# Reduce el tamaño de los archivos enviados al cliente
 <IfModule mod_deflate.c>
+    # Comprime archivos de texto plano
     AddOutputFilterByType DEFLATE text/plain
+    
+    # Comprime HTML
     AddOutputFilterByType DEFLATE text/html
+    
+    # Comprime XML
     AddOutputFilterByType DEFLATE text/xml
+    
+    # Comprime CSS
     AddOutputFilterByType DEFLATE text/css
+    
+    # Comprime XML de aplicaciones
     AddOutputFilterByType DEFLATE application/xml
+    
+    # Comprime XHTML
     AddOutputFilterByType DEFLATE application/xhtml+xml
+    
+    # Comprime RSS
     AddOutputFilterByType DEFLATE application/rss+xml
+    
+    # Comprime JavaScript
     AddOutputFilterByType DEFLATE application/javascript
+    
+    # Comprime JavaScript antiguo
     AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
 
 # Cache control
+# Configura el almacenamiento en caché de archivos estáticos
+# Mejora el rendimiento al reducir las peticiones al servidor
 <IfModule mod_expires.c>
+    # Activa el control de expiración
     ExpiresActive On
+    
+    # Imágenes: 1 año
+    # Las imágenes se almacenan en caché por un año
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
+    
+    # CSS y JavaScript: 1 mes
+    # Los archivos CSS y JS se almacenan en caché por un mes
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
 </IfModule> 

@@ -1,10 +1,22 @@
+# Archivo robots.txt para New Now
+# Este archivo controla el acceso de los motores de búsqueda al sitio
+# Define qué contenido puede ser indexado y cuál debe ser ignorado
+
+# Aplicar reglas a todos los robots
+# El asterisco (*) indica que estas reglas se aplican a todos los crawlers
 User-agent: *
-Disallow: /js/
-Disallow: /css/
-Disallow: /php/
-Disallow: /data/
-Allow: /media/
-Allow: /index.html
-Allow: /terminos.html
-Allow: /privacidad.html
-Allow: /cookies.html 
+
+# Directorios que no deben ser indexados
+# Estos directorios contienen archivos técnicos y privados que no deben aparecer en búsquedas
+Disallow: /js/        # Scripts JavaScript - Archivos de programación del cliente
+Disallow: /css/       # Hojas de estilo - Archivos de diseño y presentación
+Disallow: /php/       # Archivos PHP - Scripts del servidor y lógica de backend
+Disallow: /data/      # Datos y archivos privados - Información sensible y configuraciones
+
+# Directorios y archivos que sí deben ser indexados
+# Contenido público que queremos que aparezca en los resultados de búsqueda
+Allow: /media/        # Contenido multimedia público - Imágenes y recursos compartibles
+Allow: /index.html    # Página principal - Landing page del sitio
+Allow: /terminos.html # Términos y condiciones - Información legal importante
+Allow: /privacidad.html # Política de privacidad - Información sobre protección de datos
+Allow: /cookies.html  # Política de cookies - Información sobre uso de cookies 

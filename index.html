@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- 
+    Archivo principal de la página web de New Now
+    Contiene la estructura completa del sitio web con todas sus secciones
+    Incluye: Navbar, Hero Section, Ofertas, Formulario de Contacto y FAQ
+-->
 <head>
+    <!-- Metadatos básicos para SEO y configuración del sitio -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
@@ -8,29 +14,39 @@
     <meta name="description" content="New Now - Tu mejor opción en telecomunicaciones">
     <meta name="author" content="New Now">
     <meta name="copyright" content="Copyright © 2025 New Now">
+    
+    <!-- Configuración de seguridad y políticas de contenido -->
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:;">
-    <title>New Now - Tu mejor opción en telecomunicaciones</title>
-    <!-- Bootstrap CSS -->
+    
+    <title>Soluciones de Ahorro - Tu mejor opción en telecomunicaciones</title>
+    
+    <!-- Enlaces a hojas de estilo externas -->
+    <!-- Bootstrap CSS para el framework de diseño -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
+    <!-- Bootstrap Icons para iconos vectoriales -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <!-- Custom CSS -->
+    <!-- Estilos personalizados del sitio -->
     <link href="assets/css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Barra de navegación principal -->
+    <!-- Fija en la parte superior y responsive -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
+            <!-- Logo y nombre de la empresa -->
             <a class="navbar-brand" href="#">
-                <i class="bi bi-broadcast me-2"></i>New Now
+                <i class="bi bi-broadcast-pin me-2"></i>Soluciones de Ahorro
             </a>
+            <!-- Botón para menú móvil -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Menú de navegación -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <!-- Enlaces de navegación principales -->
                     <li class="nav-item">
                         <a class="nav-link active" href="#inicio">
                             <i class="bi bi-house-door me-1"></i>Inicio
@@ -51,6 +67,7 @@
                             <i class="bi bi-question-circle me-1"></i>FAQ
                         </a>
                     </li>
+                    <!-- Botón de llamada a la acción -->
                     <li class="nav-item ms-lg-3">
                         <a class="nav-link btn btn-primary btn-sm px-3" href="#contacto">
                             <i class="bi bi-telephone me-1"></i>Contáctanos
@@ -60,21 +77,24 @@
             </div>
         </div>
     </nav>
-    <!-- Espaciador para compensar el navbar fijo -->
+    
+    <!-- Espaciador para compensar el navbar fijo y evitar solapamiento de contenido -->
     <div style="height: 76px;"></div>
 
-    <!-- Hero Section -->
+    <!-- Sección Hero - Banner principal -->
+    <!-- Contiene el mensaje principal y elementos visuales de la página -->
     <section id="inicio" class="hero-section">
         <div class="container position-relative">
-            <!-- Elementos decorativos de fondo -->
+            <!-- Elementos decorativos de fondo para mejorar la estética -->
             <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden">
                 <div class="hero-bg-shape"></div>
                 <div class="hero-bg-dots"></div>
             </div>
             
             <div class="row align-items-center g-4 position-relative">
+                <!-- Columna izquierda: Contenido principal -->
                 <div class="col-lg-6 col-md-12 text-center text-lg-start">
-                    <!-- Badge animado -->
+                    <!-- Badge animado para destacar características -->
                     <div class="hero-badge-wrapper mb-4">
                         <span class="badge bg-primary-subtle text-white px-4 py-2 rounded-pill animate__animated animate__fadeIn">
                             <i class="bi bi-lightning-charge-fill me-2"></i>Conectividad de última generación
@@ -82,16 +102,16 @@
                     </div>
                     
                     <!-- Título principal con efecto de gradiente -->
-                    <h1 class="display-3 fw-bold mb-4 text-gradient animate__animated animate__fadeInUp">
-                        Conectando tu <span class="text-accent">futuro</span>
+                    <h1 class="display-3 fw-bold mb-4 text-primary-title-color animate__animated animate__fadeInUp">
+                        Conectando tu futuro
                     </h1>
                     
-                    <!-- Descripción con animación -->
+                    <!-- Descripción principal con animación -->
                     <p class="lead mb-5 text-white animate__animated animate__fadeInUp animate__delay-1s">
                         Ofrecemos las mejores soluciones en telecomunicaciones para tu hogar y empresa.
                     </p>
                     
-                    <!-- Botones con efectos -->
+                    <!-- Botones de llamada a la acción -->
                     <div class="d-flex gap-4 justify-content-center justify-content-lg-start mb-5 animate__animated animate__fadeInUp animate__delay-2s">
                         <a href="#ofertas" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">
                             <i class="bi bi-gift-fill me-2"></i>Ver ofertas
@@ -101,8 +121,9 @@
                         </a>
                     </div>
                     
-                    <!-- Estadísticas con iconos y animación -->
+                    <!-- Estadísticas de la empresa con animación -->
                     <div class="row g-4 mt-5 animate__animated animate__fadeInUp animate__delay-3s">
+                        <!-- Tarjeta de estadística: Clientes -->
                         <div class="col-4">
                             <div class="stat-card text-center p-3 rounded-4">
                                 <div class="stat-icon mb-2">
@@ -112,6 +133,7 @@
                                 <p class="text-white-50 mb-0">Clientes</p>
                             </div>
                         </div>
+                        <!-- Tarjeta de estadística: Satisfacción -->
                         <div class="col-4">
                             <div class="stat-card text-center p-3 rounded-4">
                                 <div class="stat-icon mb-2">
@@ -121,6 +143,7 @@
                                 <p class="text-white-50 mb-0">Satisfacción</p>
                             </div>
                         </div>
+                        <!-- Tarjeta de estadística: Soporte -->
                         <div class="col-4">
                             <div class="stat-card text-center p-3 rounded-4">
                                 <div class="stat-icon mb-2">
@@ -133,24 +156,26 @@
                     </div>
                 </div>
                 
+                <!-- Columna derecha: Imagen principal -->
                 <div class="col-lg-6 col-md-12">
                     <div class="hero-image-wrapper animate__animated animate__fadeInRight">
-                        <!-- Formas decorativas -->
+                        <!-- Elementos decorativos para la imagen -->
                         <div class="hero-shape-1"></div>
                         <div class="hero-shape-2"></div>
                         
-                        <!-- Imagen principal -->
-                        <img src="assets/img/banner_cascos.png" alt="Telecomunicaciones" class="img-fluid rounded-4 shadow-lg animate__animated animate__pulse animate__infinite animate__slower hover-float">
-                        
+                        <!-- Imagen principal con efectos de animación -->
+                        <img src="assets/img/offer-solutions.jpg" alt="Telecomunicaciones" class="img-fluid rounded-4 shadow-lg animate__animated animate__pulse animate__infinite animate__slower hover-float">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Ofertas Section -->
+    <!-- Sección de Ofertas -->
+    <!-- Muestra los planes y promociones disponibles -->
     <section id="ofertas" class="py-5">
         <div class="container">
+            <!-- Encabezado de la sección -->
             <div class="text-center mb-5 d-flex flex-column align-items-center">
                 <h2 class="display-4 fw-bold mb-3 text-center w-100 position-relative">
                     Nuestras Ofertas
@@ -158,43 +183,51 @@
                 </h2>
                 <p class="lead text-muted">Descubre nuestros planes y promociones especiales</p>
             </div>
+            <!-- Contenedor para las ofertas que se cargarán dinámicamente -->
             <div class="row" id="ofertas-container">
                 <!-- Las ofertas se cargarán dinámicamente desde JSON -->
             </div>
         </div>
     </section>
 
-    <!-- Formulario de Contacto -->
+    <!-- Sección de Contacto -->
+    <!-- Formulario de contacto y enlaces a redes sociales -->
     <section id="contacto" class="py-5 bg-gradient">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
+                    <!-- Encabezado del formulario -->
                     <div class="text-center mb-5">
-                        <h2 class="display-4 fw-bold text-primary">Contáctanos</h2>
-                        <p class="lead text-muted">¿Tienes alguna pregunta? Estamos aquí para ayudarte</p>
+                        <h2 class="display-4 fw-bold bg-text-color-contactanos">Contáctanos</h2>
+                        <p class="lead bg-text-color-contactanos">¿Tienes alguna pregunta? Estamos aquí para ayudarte</p>
                     </div>
+                    <!-- Formulario de contacto -->
                     <div class="card shadow-lg border-0">
                         <div class="card-body p-5">
                             <form id="contactForm" class="needs-validation" novalidate>
                                 <div class="row g-4">
+                                    <!-- Campo de nombre -->
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre completo" required>
                                             <label for="nombre"><i class="bi bi-person-fill me-2"></i>Nombre completo</label>
                                         </div>
                                     </div>
+                                    <!-- Campo de email -->
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
                                             <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required>
                                             <label for="email"><i class="bi bi-envelope-fill me-2"></i>Correo electrónico</label>
                                         </div>
                                     </div>
+                                    <!-- Campo de teléfono -->
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
                                             <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" required>
                                             <label for="telefono"><i class="bi bi-telephone-fill me-2"></i>Teléfono</label>
                                         </div>
                                     </div>
+                                    <!-- Selector de asunto -->
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
                                             <select class="form-select" id="asunto" name="asunto" required>
@@ -207,12 +240,14 @@
                                             <label for="asunto"><i class="bi bi-tag-fill me-2"></i>Asunto</label>
                                         </div>
                                     </div>
+                                    <!-- Campo de mensaje -->
                                     <div class="col-12">
                                         <div class="form-floating mb-4">
                                             <textarea class="form-control" id="mensaje" name="mensaje" style="height: 150px" placeholder="Tu mensaje" required></textarea>
                                             <label for="mensaje"><i class="bi bi-chat-left-text-fill me-2"></i>Tu mensaje</label>
                                         </div>
                                     </div>
+                                    <!-- Botón de envío -->
                                     <div class="col-12">
                                         <div class="d-grid">
                                             <button type="submit" class="btn btn-primary btn-lg">
@@ -224,31 +259,16 @@
                             </form>
                         </div>
                     </div>
-                    <div class="text-center mt-4">
-                        <div class="social-links">
-                            <a href="#" class="btn btn-outline-primary btn-lg mx-2" title="Facebook">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary btn-lg mx-2" title="Twitter">
-                                <i class="bi bi-twitter-x"></i>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary btn-lg mx-2" title="Instagram">
-                                <i class="bi bi-instagram"></i>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary btn-lg mx-2" title="LinkedIn">
-                                <i class="bi bi-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- Sección FAQ (Preguntas Frecuentes) -->
+    <!-- Contiene las preguntas más comunes y sus respuestas -->
     <section id="faq" class="py-5">
-        <div class="container">
-            <!-- Título con decoración -->
+        <div class="container bg-faq-color">
+            <!-- Encabezado de la sección FAQ con decoración -->
             <div class="text-center mb-5 d-flex flex-column align-items-center">
                 <h2 class="display-4 fw-bold mb-3 text-center w-100 position-relative">
                     Preguntas Frecuentes
@@ -257,10 +277,11 @@
                 <p class="lead text-muted">Resolvemos tus dudas más comunes</p>
             </div>
 
-            <!-- Acordeón de preguntas -->
+            <!-- Contenedor principal del acordeón de preguntas -->
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="accordion shadow-lg rounded-4 overflow-hidden" id="faqAccordion">
+                        <!-- Pregunta 1: Servicios ofrecidos -->
                         <div class="accordion-item border-0">
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
@@ -274,25 +295,30 @@
                             </h2>
                             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
+                                    <!-- Lista de servicios en formato de tarjetas -->
                                     <div class="row g-4">
+                                        <!-- Tarjeta de servicio: Internet -->
                                         <div class="col-md-6">
                                             <div class="d-flex align-items-center p-3 bg-light rounded-3">
                                                 <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
                                                 <span>Internet de alta velocidad con fibra óptica</span>
                                             </div>
                                         </div>
+                                        <!-- Tarjeta de servicio: Telefonía -->
                                         <div class="col-md-6">
                                             <div class="d-flex align-items-center p-3 bg-light rounded-3">
                                                 <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
                                                 <span>Telefonía fija con llamadas ilimitadas</span>
                                             </div>
                                         </div>
+                                        <!-- Tarjeta de servicio: TV -->
                                         <div class="col-md-6">
                                             <div class="d-flex align-items-center p-3 bg-light rounded-3">
                                                 <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
                                                 <span>Televisión por cable con más de 100 canales</span>
                                             </div>
                                         </div>
+                                        <!-- Tarjeta de servicio: Móvil -->
                                         <div class="col-md-6">
                                             <div class="d-flex align-items-center p-3 bg-light rounded-3">
                                                 <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
@@ -304,6 +330,7 @@
                             </div>
                         </div>
 
+                        <!-- Pregunta 2: Proceso de contratación -->
                         <div class="accordion-item border-0">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
@@ -317,7 +344,9 @@
                             </h2>
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
+                                    <!-- Opciones de contratación -->
                                     <div class="row g-4">
+                                        <!-- Opción 1: Contratación Online -->
                                         <div class="col-md-4">
                                             <div class="text-center p-4 bg-light rounded-3 h-100">
                                                 <i class="bi bi-laptop text-primary fs-1 mb-3"></i>
@@ -325,6 +354,7 @@
                                                 <p class="mb-0">A través de nuestra web</p>
                                             </div>
                                         </div>
+                                        <!-- Opción 2: Llamada Telefónica -->
                                         <div class="col-md-4">
                                             <div class="text-center p-4 bg-light rounded-3 h-100">
                                                 <i class="bi bi-telephone text-primary fs-1 mb-3"></i>
@@ -332,6 +362,7 @@
                                                 <p class="mb-0">900 123 456 (24/7)</p>
                                             </div>
                                         </div>
+                                        <!-- Opción 3: Tiendas Físicas -->
                                         <div class="col-md-4">
                                             <div class="text-center p-4 bg-light rounded-3 h-100">
                                                 <i class="bi bi-shop text-primary fs-1 mb-3"></i>
@@ -344,6 +375,7 @@
                             </div>
                         </div>
 
+                        <!-- Pregunta 3: Velocidades de Internet -->
                         <div class="accordion-item border-0">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
@@ -357,7 +389,9 @@
                             </h2>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
+                                    <!-- Planes de velocidad -->
                                     <div class="row g-4">
+                                        <!-- Plan Básico -->
                                         <div class="col-md-4">
                                             <div class="p-4 bg-light rounded-3 h-100">
                                                 <div class="d-flex align-items-center mb-3">
@@ -368,6 +402,7 @@
                                                 <p class="mb-0">Ideal para navegación y redes sociales</p>
                                             </div>
                                         </div>
+                                        <!-- Plan Pro -->
                                         <div class="col-md-4">
                                             <div class="p-4 bg-light rounded-3 h-100">
                                                 <div class="d-flex align-items-center mb-3">
@@ -378,6 +413,7 @@
                                                 <p class="mb-0">Perfecto para streaming y trabajo remoto</p>
                                             </div>
                                         </div>
+                                        <!-- Plan Premium -->
                                         <div class="col-md-4">
                                             <div class="p-4 bg-light rounded-3 h-100">
                                                 <div class="d-flex align-items-center mb-3">
@@ -393,6 +429,7 @@
                             </div>
                         </div>
 
+                        <!-- Pregunta 4: Soporte Técnico -->
                         <div class="accordion-item border-0">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
@@ -406,7 +443,9 @@
                             </h2>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
+                                    <!-- Opciones de soporte -->
                                     <div class="row g-4">
+                                        <!-- Soporte 24/7 -->
                                         <div class="col-md-4">
                                             <div class="text-center p-4 bg-light rounded-3 h-100">
                                                 <i class="bi bi-clock-history text-primary fs-1 mb-3"></i>
@@ -414,6 +453,7 @@
                                                 <p class="mb-0">Atención continua todos los días</p>
                                             </div>
                                         </div>
+                                        <!-- Asistencia Técnica -->
                                         <div class="col-md-4">
                                             <div class="text-center p-4 bg-light rounded-3 h-100">
                                                 <i class="bi bi-tools text-primary fs-1 mb-3"></i>
@@ -421,6 +461,7 @@
                                                 <p class="mb-0">Remota y presencial</p>
                                             </div>
                                         </div>
+                                        <!-- Chat en Vivo -->
                                         <div class="col-md-4">
                                             <div class="text-center p-4 bg-light rounded-3 h-100">
                                                 <i class="bi bi-chat-dots text-primary fs-1 mb-3"></i>
@@ -433,6 +474,7 @@
                             </div>
                         </div>
 
+                        <!-- Pregunta 5: Garantías -->
                         <div class="accordion-item border-0">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
@@ -446,7 +488,9 @@
                             </h2>
                             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
+                                    <!-- Tipos de garantías -->
                                     <div class="row g-4">
+                                        <!-- Garantía de Velocidad -->
                                         <div class="col-md-4">
                                             <div class="text-center p-4 bg-light rounded-3 h-100">
                                                 <i class="bi bi-speedometer text-primary fs-1 mb-3"></i>
@@ -454,6 +498,7 @@
                                                 <p class="mb-0">Velocidad mínima garantizada</p>
                                             </div>
                                         </div>
+                                        <!-- Sin Permanencia -->
                                         <div class="col-md-4">
                                             <div class="text-center p-4 bg-light rounded-3 h-100">
                                                 <i class="bi bi-calendar-check text-primary fs-1 mb-3"></i>
@@ -461,6 +506,7 @@
                                                 <p class="mb-0">En la mayoría de planes</p>
                                             </div>
                                         </div>
+                                        <!-- Satisfacción -->
                                         <div class="col-md-4">
                                             <div class="text-center p-4 bg-light rounded-3 h-100">
                                                 <i class="bi bi-emoji-smile text-primary fs-1 mb-3"></i>
@@ -478,16 +524,18 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer - Pie de página -->
+    <!-- Contiene información de contacto, enlaces rápidos y legal -->
     <footer class="footer bg-dark text-light py-5">
         <div class="container">
             <div class="row g-4">
-                <!-- Logo y Descripción -->
+                <!-- Columna 1: Logo y Descripción de la empresa -->
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-brand mb-4">
-                        <h3 class="text-primary fw-bold">New Now</h3>
+                        <h3 class="text-primary fw-bold">Soluciones de Ahorro</h3>
                         <p class="text-light-50">Conectando el futuro con innovación y calidad. Tu mejor opción en telecomunicaciones.</p>
                     </div>
+                    <!-- Enlaces a redes sociales -->
                     <div class="social-links">
                         <a href="#" class="social-link me-3" title="Facebook">
                             <i class="bi bi-facebook"></i>
@@ -504,7 +552,7 @@
                     </div>
                 </div>
 
-                <!-- Enlaces Rápidos -->
+                <!-- Columna 2: Enlaces Rápidos de navegación -->
                 <div class="col-lg-2 col-md-6">
                     <h5 class="text-primary mb-4">Enlaces Rápidos</h5>
                     <ul class="list-unstyled footer-links">
@@ -515,22 +563,26 @@
                     </ul>
                 </div>
 
-                <!-- Contacto -->
+                <!-- Columna 3: Información de Contacto -->
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-primary mb-4">Contacto</h5>
                     <ul class="list-unstyled footer-contact">
+                        <!-- Dirección física -->
                         <li class="mb-3">
                             <i class="bi bi-geo-alt-fill me-2"></i>
                             Calle Álvarez 20, Madrid, España
                         </li>
+                        <!-- Teléfono de contacto -->
                         <li class="mb-3">
                             <i class="bi bi-telephone-fill me-2"></i>
                             (123) 456-7890
                         </li>
+                        <!-- Correo electrónico -->
                         <li class="mb-3">
                             <i class="bi bi-envelope-fill me-2"></i>
                             contacto@stormforce.com
                         </li>
+                        <!-- Horario de atención -->
                         <li>
                             <i class="bi bi-clock-fill me-2"></i>
                             Lun-Vie: 9:00 - 18:00
@@ -539,14 +591,16 @@
                 </div>
             </div>
 
-            <!-- Línea divisoria -->
+            <!-- Separador visual -->
             <hr class="footer-divider my-4">
 
-            <!-- Copyright y Enlaces Legales -->
+            <!-- Sección de Copyright y Enlaces Legales -->
             <div class="row align-items-center">
+                <!-- Copyright -->
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2024 New Now. Todos los derechos reservados.</p>
+                    <p class="mb-0">&copy; 2024 Soluciones de Ahorro. Todos los derechos reservados.</p>
                 </div>
+                <!-- Enlaces legales -->
                 <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
                     <a href="pages/terminos.html" class="text-light-50 me-3">Términos y Condiciones</a>
                     <a href="pages/privacidad.html" class="text-light-50 me-3">Política de Privacidad</a>
@@ -557,27 +611,34 @@
     </footer>
 
     <!-- Modal de Contratación -->
+    <!-- Ventana emergente para el proceso de contratación de servicios -->
     <div class="modal fade" id="contratacionModal" tabindex="-1" aria-labelledby="contratacionModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
+                <!-- Encabezado del modal -->
                 <div class="modal-header">
                     <h5 class="modal-title" id="contratacionModalLabel">Contratar Plan</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <!-- Cuerpo del modal con formulario -->
                 <div class="modal-body">
                     <form id="contratacionForm">
+                        <!-- Campo de nombre -->
                         <div class="mb-3">
                             <label for="nombreContrato" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="nombreContrato" required>
                         </div>
+                        <!-- Campo de apellidos -->
                         <div class="mb-3">
                             <label for="apellidosContrato" class="form-label">Apellidos</label>
                             <input type="text" class="form-control" id="apellidosContrato" required>
                         </div>
+                        <!-- Campo de teléfono -->
                         <div class="mb-3">
                             <label for="telefonoContrato" class="form-label">Número de Teléfono</label>
                             <input type="tel" class="form-control" id="telefonoContrato" required>
                         </div>
+                        <!-- Selector de hora de llamada -->
                         <div class="mb-3">
                             <label for="horaLlamada" class="form-label">Hora preferida para llamar</label>
                             <input type="range" class="form-range" id="horaLlamada" min="9" max="18" step="1">
@@ -589,6 +650,7 @@
                         </div>
                     </form>
                 </div>
+                <!-- Pie del modal con botones de acción -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     <button type="button" class="btn btn-primary" onclick="enviarSolicitud()">Enviar Solicitud</button>
@@ -597,12 +659,14 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
+    <!-- Scripts de JavaScript -->
+    <!-- Bootstrap JS para funcionalidades del framework -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
+    <!-- JavaScript personalizado para funcionalidades específicas -->
     <script src="assets/js/main.js"></script>
 
-    <!-- Botón flotante de WhatsApp y luego se cambiara por el de la empresa (https://wa.me/34600000000)-->
+    <!-- Botón flotante de WhatsApp -->
+    <!-- Enlace directo al servicio de mensajería para contacto rápido -->
     <a href="" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-whatsapp"></i>
     </a>

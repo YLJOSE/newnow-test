@@ -1,18 +1,40 @@
-📁 proyecto/
-├── �� assets/
-│   ├── 📁 css/
-│   │   └── styles.css
-│   ├── 📁 js/
-│   │   └── main.js
-│   ├── �� img/
-│   │   └── (imágenes)
-│   └── 📁 fonts/
-│       └── (fuentes)
-├── 📁 pages/
-│   ├── cookies.html
-│   ├── privacidad.html
-│   └── terminos.html
-├── index.html
-├── estructure.txt
-├── robots.txt
-└── .htaccess
+# Estructura del Proyecto New Now
+# Este archivo describe la organización de archivos y directorios del proyecto
+# Proporciona una visión general de la arquitectura del sitio web
+
+📁 proyecto/                    # Directorio raíz del proyecto
+                                # Contiene todos los archivos y subdirectorios del sitio
+├── 📁 assets/                 # Directorio de recursos estáticos
+                                # Almacena todos los archivos estáticos del sitio
+│   ├── 📁 css/               # Hojas de estilo
+                                # Contiene los archivos CSS para el diseño
+│   │   └── styles.css        # Estilos personalizados del sitio
+                                # Define la apariencia visual y el diseño responsivo
+│   ├── 📁 js/                # Scripts de JavaScript
+                                # Contiene los archivos de programación del cliente
+│   │   └── main.js           # Funcionalidades personalizadas
+                                # Implementa la interactividad y comportamientos del sitio
+│   ├── 📁 img/               # Imágenes y recursos gráficos
+                                # Almacena todas las imágenes utilizadas en el sitio
+│   │   └── (imágenes)        # Archivos de imagen del sitio
+                                # Incluye logos, iconos, fondos y contenido visual
+│   └── 📁 fonts/             # Fuentes tipográficas
+                                # Contiene las fuentes personalizadas del sitio
+│       └── (fuentes)         # Archivos de fuentes personalizadas
+                                # Define la tipografía única del sitio
+├── 📁 pages/                 # Páginas adicionales del sitio
+                                # Contiene las páginas secundarias y legales
+│   ├── cookies.html          # Política de cookies
+                                # Información sobre el uso de cookies en el sitio
+│   ├── privacidad.html       # Política de privacidad
+                                # Detalles sobre el manejo de datos personales
+│   └── terminos.html         # Términos y condiciones
+                                # Condiciones de uso del sitio y servicios
+├── index.html                # Página principal del sitio
+                                # Landing page y punto de entrada principal
+├── estructure.txt            # Este archivo de estructura
+                                # Documenta la organización del proyecto
+├── robots.txt                # Configuración para motores de búsqueda
+                                # Controla el acceso de los crawlers al sitio
+└── .htaccess                 # Configuración del servidor Apache
+                                # Define reglas de seguridad y optimización

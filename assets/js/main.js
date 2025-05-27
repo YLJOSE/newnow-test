@@ -1,73 +1,80 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Datos de ofertas estáticos
-    const ofertas = [
-        {
-            id: 1,
-            titulo: "Plan Básico",
-            descripcion: "Internet de alta velocidad para tu hogar",
-            precio: "29.99",
-            caracteristicas: [
-                "50 Mbps de velocidad",
-                "Sin límite de datos",
-                "Instalación gratuita",
-                "Soporte 24/7"
-            ]
-        },
-        {
-            id: 2,
-            titulo: "Plan Familiar",
-            descripcion: "La mejor opción para toda la familia",
-            precio: "49.99",
-            caracteristicas: [
-                "200 Mbps de velocidad",
-                "Sin límite de datos",
-                "Instalación gratuita",
-                "Soporte 24/7",
-                "Router de última generación"
-            ]
-        },
-        {
-            id: 3,
-            titulo: "Plan Empresarial",
-            descripcion: "Solución completa para tu negocio",
-            precio: "99.99",
-            caracteristicas: [
-                "1 Gbps de velocidad",
-                "Sin límite de datos",
-                "IP fija",
-                "Soporte prioritario 24/7",
-                "Router empresarial",
-                "Backup de datos"
-            ]
-        }
-    ];
+// Datos de ofertas estáticos
+const ofertas = [
+    {
+        id: 1,
+        titulo: "Plan O2 ",
+        descripcion: "Ideal para hogares pequeños",
+        precio: "29.99€",
+        caracteristicas: [
+            "Internet de alta velocidad",
+            "Soporte 24/7",
+            "Sin permanencia"
+        ],
+        tipo: "O2"
+    },
+    {
+        id: 2,
+        titulo: "Plan Vodafone",
+        descripcion: "Perfecto para familias",
+        precio: "49.99€",
+        caracteristicas: [
+            "Internet de alta velocidad",
+            "Soporte 24/7",
+            "Sin permanencia",
+            "Instalación gratuita"
+        ],
+        tipo: "Vodafone"
+    },
+    {
+        id: 3,
+        titulo: "Plan Orange",
+        descripcion: "Para negocios y empresas",
+        precio: "79.99€",
+        caracteristicas: [
+            "Internet de alta velocidad",
+            "Soporte 24/7",
+            "Sin permanencia",
+            "Instalación gratuita",
+            "IP fija"
+        ],
+        tipo: "Orange"
+    }
+];
 
-    // Mostrar ofertas
-    const ofertasContainer = document.getElementById('ofertas-container');
+// Función para generar las tarjetas de ofertas
+function generarOfertas() {
+    const contenedor = document.getElementById('ofertas-container');
+    if (!contenedor) return;
+
     ofertas.forEach(oferta => {
-        const ofertaHTML = `
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">${oferta.titulo}</h5>
-                        <p class="card-text">${oferta.descripcion}</p>
-                        <h3 class="text-primary mb-3">$${oferta.precio}/mes</h3>
-                        <ul class="list-unstyled">
-                            ${oferta.caracteristicas.map(caracteristica => 
-                                `<li><i class="bi bi-check-circle-fill text-success me-2"></i>${caracteristica}</li>`
-                            ).join('')}
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-top-0">
-                        <button class="btn btn-primary w-100" onclick="abrirModalContratacion('${oferta.titulo}')">
-                            Contratar ahora
-                        </button>
-                    </div>
+        const card = document.createElement('div');
+        card.className = `col-md-4 mb-4 d-flex`;
+        card.innerHTML = `
+            <div class="card ${oferta.tipo} w-100">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title">${oferta.titulo}</h3>
+                    <p class="card-text">${oferta.descripcion}</p>
+                    <div class="precio">${oferta.precio}<small>/mes</small></div>
+                    <ul class="caracteristicas flex-grow-1">
+                        ${oferta.caracteristicas.map(caracteristica => 
+                            `<li><i class="fas fa-check"></i>${caracteristica}</li>`
+                        ).join('')}
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary w-100" onclick="abrirModalContratacion('${oferta.titulo}')">
+                        Solicitar ahora
+                    </button>
                 </div>
             </div>
         `;
-        ofertasContainer.innerHTML += ofertaHTML;
+        contenedor.appendChild(card);
     });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Generar ofertas al cargar la página
+    generarOfertas();
 
     // Manejar el formulario de contacto
     const contactForm = document.getElementById('contactForm');
