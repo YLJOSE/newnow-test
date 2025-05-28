@@ -56,9 +56,9 @@ function generarOfertas() {
                     <p class="card-text">${oferta.descripcion}</p>
                     <div class="precio">${oferta.precio}<small>/mes</small></div>
                     <ul class="caracteristicas flex-grow-1">
-                        ${oferta.caracteristicas.map(caracteristica => 
-                            `<li><i class="fas fa-check"></i>${caracteristica}</li>`
-                        ).join('')}
+                        ${oferta.caracteristicas.map(caracteristica =>
+            `<li><i class="fas fa-check"></i>${caracteristica}</li>`
+        ).join('')}
                     </ul>
                 </div>
                 <div class="card-footer">
@@ -72,14 +72,14 @@ function generarOfertas() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Generar ofertas al cargar la página
     generarOfertas();
 
     // Manejar el formulario de contacto
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
+        contactForm.addEventListener('submit', function (event) {
             event.preventDefault();
             alert('¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.');
             this.reset();
@@ -89,9 +89,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Manejar el slider de hora
     const horaSlider = document.getElementById('horaLlamada');
     const horaSeleccionada = document.getElementById('horaSeleccionada');
-    
+
     if (horaSlider && horaSeleccionada) {
-        horaSlider.addEventListener('input', function() {
+        horaSlider.addEventListener('input', function () {
             const hora = parseInt(this.value);
             const minutos = hora % 1 === 0 ? '00' : '30';
             horaSeleccionada.textContent = `${hora}:${minutos}`;
@@ -117,13 +117,13 @@ function enviarSolicitud() {
         alert('Por favor, complete todos los campos del formulario.');
         return;
     }
-
+    // despues ver si se puede enviar al excel
     alert(`¡Gracias ${nombre} ${apellidos}!\nTe llamaremos al ${telefono} a las ${hora}.`);
-    
+
     // Cerrar el modal
     const modal = bootstrap.Modal.getInstance(document.getElementById('contratacionModal'));
     modal.hide();
-    
+
     // Limpiar el formulario
     document.getElementById('contratacionForm').reset();
     document.getElementById('horaSeleccionada').textContent = '13:30';
